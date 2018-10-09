@@ -15,7 +15,7 @@ export export CMAKE_INSTALL_PREFIX=../debian/usr
 	dh $@
 
 override_dh_auto_configure:
-	cmake . || { cd debian/cmake && ./bootstrap && cd - && debian/cmake/bin/cmake . ;}
+	cmake . || { cd debian/cmake && ./bootstrap && cd - && find . -name 'cmake' && debian/cmake/bin/cmake . ;}
 
 override_dh_auto_install:
 	dh_auto_install
