@@ -1,10 +1,10 @@
 Source: softether-vpn
 Section: net
 Priority: optional
-Maintainer: Dmitry Orlov <me@mosquito.su>
+Maintainer: Dmitry Verhoturov <paskal.07@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~), libncurses5-dev, linux-libc-dev, libssl-dev, zlib1g-dev, libreadline-dev, build-essential, dh-exec, wget
 Standards-Version: 3.9.1
-Homepage: http://www.softether.org/
+Homepage: https://www.softether.org/
 
 Package: softether-vpnbridge
 Architecture: any

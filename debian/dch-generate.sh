@@ -18,7 +18,7 @@ status="UNRELEASED"
 # timezone in +hh:mm from UTC (+9 UTC)
 tzone="+09:00"
 # static changelog entry
-entry="* See: http://www.softether.org/5-download/history"
+entry="* See: https://www.softether.org/5-download/history"
 
 # are you a debian maintainer?
 if [ -z "$DEBFULLNAME" ]; then
