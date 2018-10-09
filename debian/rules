@@ -10,12 +10,12 @@ endef
 
 export DH_VERBOSE=1
 export export CMAKE_INSTALL_PREFIX=../debian/usr
+export CMAKE_VERSION=3.12.3
 
 %:
 	dh $@
 
 override_dh_auto_configure:
-    export CMAKE_VERSION=3.12.1
 	wget https://cmake.org/files/v${CMAKE_VERSION%.*}/cmake-${CMAKE_VERSION}.tar.gz && tar -xzf cmake-${CMAKE_VERSION}.tar.gz
     cd cmake-${CMAKE_VERSION} && ./bootstrap && make install && cd -
 	cmake .
