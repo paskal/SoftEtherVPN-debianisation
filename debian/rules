@@ -14,6 +14,9 @@ export export CMAKE_INSTALL_PREFIX=../debian/usr
 %:
 	dh $@
 
+# build using cmake we install in control file, but in case it fails (it's expected if version older than required),
+# we're instead build cmake 3.7.6 (last one without g++11 requirement which is not supported by GCC under 12.04),
+# and build the package using this newly built cmake binary
 override_dh_auto_configure:
 	cmake . || { cd debian/cmake && ./bootstrap && make && cd - && debian/cmake/bin/cmake . ;}
 
