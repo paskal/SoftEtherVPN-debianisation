@@ -3,7 +3,7 @@
 define generate_stub
 	mkdir -p debian/usr/bin
 	echo '#!/bin/sh'                              > debian/usr/bin/$(1)
-	echo '/usr/local/libexec/softether/$(1)/$(1) "$$@"' >> debian/usr/bin/$(1)
+	echo '/usr/libexec/softether/$(1)/$(1) "$$@"' >> debian/usr/bin/$(1)
 	echo 'exit $?'                               >> debian/usr/bin/$(1)
 	chmod +x debian/usr/bin/$(1)
 endef
