@@ -1,3 +1,2 @@
 #! /usr/bin/dh-exec
-debian/tmp/usr/local/lib/libcedar.so usr/local/lib/
-debian/tmp/usr/local/lib/libmayaqua.so usr/local/lib/
+debian/tmp/usr/local/lib/ usr/local/lib/
