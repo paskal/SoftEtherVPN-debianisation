@@ -1,8 +1,8 @@
-softether-vpn (0:5.01.9663) unstable; urgency=low
+softether-vpn (0:5.01.9664) unstable; urgency=low
 
   * Fix debianisation
 
- -- Dmitry Verhoturov <paskal.07@gmail.com>  Thu, 09 Oct 2018 13:30:30 +0300
+ -- Dmitry Verhoturov <paskal.07@gmail.com>  Thu, 06 Nov 2018 11:10:00 +0300
 
 softether-vpn (0:5.01.9657) unstable; urgency=low
 
