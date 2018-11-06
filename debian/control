@@ -6,9 +6,15 @@ Build-Depends: debhelper (>= 7.0.50~), libncurses5-dev, linux-libc-dev, libssl-d
 Standards-Version: 3.9.1
 Homepage: https://www.softether.org/
 
+Package: softether-common
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Section: net
+Description: SoftEther VPN is an open-source cross-platform multi-protocol VPN program, created as an academic project in the University of Tsukuba.
+
 Package: softether-vpnbridge
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, softether-vpncmd
+Depends: ${misc:Depends}, ${shlibs:Depends}, softether-vpncmd, softether-common
 Section: net
 Description: VPN Bridge daemon
  An Open-Source Free Cross-platform Multi-protocol VPN Program, as an academic project from University of Tsukuba.
@@ -26,7 +32,7 @@ Description: VPN Bridge daemon
 
 Package: softether-vpnclient
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, softether-vpncmd
+Depends: ${misc:Depends}, ${shlibs:Depends}, softether-vpncmd, softether-common
 Section: net
 Description: VPN Client daemon
  An Open-Source Free Cross-platform Multi-protocol VPN Program, as an academic project from University of Tsukuba.
@@ -44,7 +50,7 @@ Description: VPN Client daemon
 
 Package: softether-vpncmd
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, softether-common
 Section: net
 Description: Command line utils
  An Open-Source Free Cross-platform Multi-protocol VPN Program, as an academic project from University of Tsukuba.
@@ -62,7 +68,7 @@ Description: Command line utils
 
 Package: softether-vpnserver
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, softether-vpncmd
+Depends: ${misc:Depends}, ${shlibs:Depends}, softether-vpncmd, softether-common
 Section: net
 Description: VPN Server daemon
  An Open-Source Free Cross-platform Multi-protocol VPN Program, as an academic project from University of Tsukuba.
