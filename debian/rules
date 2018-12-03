@@ -22,6 +22,9 @@ override_dh_auto_configure:
 
 override_dh_auto_install:
 	dh_auto_install
+	./build/vpntest s || echo
+	./build/vpntest c || echo
+	./build/vpntest b || echo
 	$(call generate_stub,vpnserver)
 	$(call generate_stub,vpnbridge)
 	$(call generate_stub,vpncmd)
