@@ -20,8 +20,6 @@ export export CMAKE_INSTALL_PREFIX=../debian/usr
 override_dh_auto_configure:
 	cmake . || { cd debian/cmake && ./bootstrap && make && cd - && debian/cmake/bin/cmake . ;}
 
-override_dh_usrlocal:
-
 override_dh_auto_install:
 	dh_auto_install
 	$(call generate_stub,vpnserver)
