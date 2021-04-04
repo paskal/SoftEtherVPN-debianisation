@@ -1,3 +1,9 @@
+softether-vpn (0:5.01.9674-0) unstable; urgency=low
+
+  * Bump version
+
+ -- Dmitry Verhoturov <paskal.07@gmail.com>  Sun, 04 Apr 2021 12:21:00 +0200
+
 softether-vpn (0:5.01.9667-0) unstable; urgency=low
 
   * Fix debianisation
