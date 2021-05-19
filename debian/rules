@@ -14,8 +14,20 @@ export export CMAKE_INSTALL_PREFIX=../debian/usr
 %:
 	dh $@
 
+# Build using cmake we install in control file, but in case it fails
+# (it's expected if version older than 3.11 at the moment of writing),
+# we're instead build cmake 3.11.14, and try to build the package using this newly built cmake binary
+#
+# Affected Ubuntu and CMake versions:
+# Bionic 3.10.2
+# Xenial 3.5.1
+# Trusty 3.5.1
+# Precise 2.8.7
+#
+# Realistically it's fair to expect the Bionic to be able to build newer CMake and utilise it,
+# others are likely beyond the point of repair.
 override_dh_auto_configure:
-	cmake .
+	cmake . || { cd debian/cmake && ./bootstrap && make && cd - && debian/cmake/bin/cmake . ;}
 
 override_dh_auto_install:
 	dh_auto_install
